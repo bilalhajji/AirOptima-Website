@@ -1,0 +1,885 @@
+/********** common setting **********/
+h2 {
+    font-size: 2.8rem !important;
+    font-weight: 700;
+}
+
+img {
+    display: block;
+    max-width: 50%;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+.jumbotron {
+    margin-bottom: 0 !important;
+}
+
+.atlas-cta {
+    border-radius: 22px !important;
+    padding: 12px 30px !important;
+    font-weight: 700;
+    transition: .3s ease-in-out !important;
+}
+
+.atlas-cta:hover {
+    text-decoration: none;
+    transform: translateY(-5px);
+}
+
+.atlas-cta-wide {
+    width: 100%;
+}
+
+.cta-green {
+    background: #00FFAD;
+    color: #192440;
+}
+
+.cta-green:hover {
+    color: #ffffff;
+    background: #00e69c;
+}
+
+.cta-blue {
+    background: #192440;
+    color: #ffffff;
+}
+
+.cta-blue:hover {
+    color: #ffffff;
+    background: #121a2e;
+}
+
+.cta-ghost {
+    border: 2px solid #192440 !important;
+    color: #192440;
+}
+
+.cta-ghost:hover {
+    color: #ffffff;
+    background: #121a2e;
+}
+
+#banner {
+    background-size: cover;
+}
+
+/********** banner **********/
+#banner header {
+    overflow: hidden;
+}
+
+#banner header img {
+    max-width: 80px;
+}
+
+/********** feature (skew background) **********/
+.feature img {
+    width: 100%;
+    max-width: 480px;
+}
+
+#feature-first {
+    background: linear-gradient(168deg, #ffffff 55%, #00FFAD 0);
+}
+
+#feature-last {
+    background: #00FFAD;
+}
+
+/********** price table **********/
+#price-table {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+#price-table__premium {
+    background: #192440;
+    color: #ffffff;
+}
+
+#price-table ul li {
+    padding: 5px 0;
+}
+
+/********** contact **********/
+#contact {
+    background-size: cover;
+}
+
+#contact ul li {
+    padding: 3px 0;
+}
+
+#contact form {
+    color: #00FFAD;
+}
+
+#contact form input,
+#contact form textarea {
+    background: transparent;
+    border: 1px solid #00FFAD;
+    color: #ffffff;
+}
+
+/********** copyright **********/
+#copyright {
+    background: #192440;
+    padding: 2rem 3rem;
+}
+
+#copyright #social-media a {
+    width: 40px;
+    height: 40px;
+    border-radius: 99%;
+    background: #ffffff;
+    transition: .4s ease;
+}
+
+#copyright #social-media a i {
+    color: #192440;
+    font-size: 1.2rem;
+    line-height: 40px;
+}
+
+#copyright #social-media a:hover {
+    background: #00FFAD;
+}
+
+#copyright #social-media a:hover i {
+    color: #ffffff;
+}
+
+/********** RWD **********/
+@media (max-width: 575px) {
+    #banner h1 {
+        font-size: 3.6rem;
+    }
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .custom-card {
+    position: relative;
+    height: 500px; /* Hauteur personnalisée pour les cartes */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0; /* Par défaut, les cartes sont invisibles */
+    animation: fadeIn 0.5s ease-in-out forwards; /* Animation de transition */
+  }
+  
+  .custom-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Couleur de fond de la superposition */
+    color: #fff; /* Couleur du texte */
+    opacity: 0; /* Par défaut, la superposition est invisible */
+    transition: opacity 0.3s ease; /* Animation de transition */
+  }
+  
+  .custom-card:hover .custom-card-overlay {
+    opacity: 1; /* La superposition devient visible lors du survol */
+  }
+  
+  .custom-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .custom-card-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #007bff; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 8px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Couleur du bouton au survol */
+  }
+  
+  .custom-card {
+  /* ... styles précédents ... */
+  opacity: 0; /* Par défaut, les cartes sont invisibles */
+}
+
+.animate {
+  opacity: 1; /* Les cartes deviennent visibles */
+  transition: opacity 0.5s ease-in-out; /* Transition pour l'opacité */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Début de l'animation : opacité à 0 */
+  }
+  to {
+    opacity: 1; /* Fin de l'animation : opacité à 1 */
+  }
+}
+
+body.animate-scroll .custom-card {
+  animation: fadeIn 0.5s ease-in-out; /* Animation de fondu lors du premier défilement */
+}
+
+.partenaires-bg {
+    background-color: #004d7d;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.partenaires-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partenaire-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+.member-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .member-list li {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .member-list li img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .member-list li span {
+    display: block;
+    font-size: 16px;
+  }
+  .member-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.member-item {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #004d7d;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.member-item:hover {
+    background-color: #0088cc;
+}
+
+.member-name {
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.custom-card {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+  
+  .custom-card-overlay {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .custom-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .custom-card-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .custom-card-overlay a {
+    color: white;
+  }
+  
+  .custom-card-overlay a:hover {
+    text-decoration: none;
+  }
+  .prototype-section {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .prototype-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .prototype-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .prototype-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .prototype-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .prototype-item:hover .prototype-overlay {
+    opacity: 1;
+  }
+  
+  .prototype-overlay-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .prototype-overlay-description {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .simulation-section {
+    background-color: #e6e6e6;
+    padding: 50px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .simulation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .simulation-item video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .simulation-overlay-description {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 767px){
+/********** common setting **********/
+h2 {
+  font-size: 2.8rem !important;
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  max-width: 50%;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.jumbotron {
+  margin-bottom: 0 !important;
+}
+
+.atlas-cta {
+  border-radius: 22px !important;
+  padding: 12px 30px !important;
+  font-weight: 700;
+  transition: .3s ease-in-out !important;
+}
+
+.atlas-cta:hover {
+  text-decoration: none;
+  transform: translateY(-5px);
+}
+
+.atlas-cta-wide {
+  width: 100%;
+}
+
+.cta-green {
+  background: #00FFAD;
+  color: #192440;
+}
+
+.cta-green:hover {
+  color: #ffffff;
+  background: #00e69c;
+}
+
+.cta-blue {
+  background: #192440;
+  color: #ffffff;
+}
+
+.cta-blue:hover {
+  color: #ffffff;
+  background: #121a2e;
+}
+
+.cta-ghost {
+  border: 2px solid #192440 !important;
+  color: #192440;
+}
+
+.cta-ghost:hover {
+  color: #ffffff;
+  background: #121a2e;
+}
+
+#banner {
+  background-size: cover;
+}
+
+/********** banner **********/
+#banner header {
+  overflow: hidden;
+}
+
+#banner header img {
+  max-width: 80px;
+}
+
+/********** feature (skew background) **********/
+.feature img {
+  width: 100%;
+  max-width: 480px;
+}
+
+#feature-first {
+  background: linear-gradient(168deg, #ffffff 55%, #00FFAD 0);
+}
+
+#feature-last {
+  background: #00FFAD;
+}
+
+/********** price table **********/
+#price-table {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+#price-table__premium {
+  background: #192440;
+  color: #ffffff;
+}
+
+#price-table ul li {
+  padding: 5px 0;
+}
+
+/********** contact **********/
+#contact {
+  background-size: cover;
+}
+
+#contact ul li {
+  padding: 3px 0;
+}
+
+#contact form {
+  color: #00FFAD;
+}
+
+#contact form input,
+#contact form textarea {
+  background: transparent;
+  border: 1px solid #00FFAD;
+  color: #ffffff;
+}
+
+/********** copyright **********/
+#copyright {
+  background: #192440;
+  padding: 2rem 3rem;
+}
+
+#copyright #social-media a {
+  width: 40px;
+  height: 40px;
+  border-radius: 99%;
+  background: #ffffff;
+  transition: .4s ease;
+}
+
+#copyright #social-media a i {
+  color: #192440;
+  font-size: 1.2rem;
+  line-height: 40px;
+}
+
+#copyright #social-media a:hover {
+  background: #00FFAD;
+}
+
+#copyright #social-media a:hover i {
+  color: #ffffff;
+}
+
+/********** RWD **********/
+@media (max-width: 575px) {
+  #banner h1 {
+      font-size: 3.6rem;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-card {
+  position: relative;
+  height: 500px; /* Hauteur personnalisée pour les cartes */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0; /* Par défaut, les cartes sont invisibles */
+  animation: fadeIn 0.5s ease-in-out forwards; /* Animation de transition */
+}
+
+.custom-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Couleur de fond de la superposition */
+  color: #fff; /* Couleur du texte */
+  opacity: 0; /* Par défaut, la superposition est invisible */
+  transition: opacity 0.3s ease; /* Animation de transition */
+}
+
+.custom-card:hover .custom-card-overlay {
+  opacity: 1; /* La superposition devient visible lors du survol */
+}
+
+.custom-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.custom-card-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff; /* Couleur du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Couleur du bouton au survol */
+}
+
+.custom-card {
+/* ... styles précédents ... */
+opacity: 0; /* Par défaut, les cartes sont invisibles */
+}
+
+.animate {
+opacity: 1; /* Les cartes deviennent visibles */
+transition: opacity 0.5s ease-in-out; /* Transition pour l'opacité */
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0; /* Début de l'animation : opacité à 0 */
+}
+to {
+  opacity: 1; /* Fin de l'animation : opacité à 1 */
+}
+}
+
+body.animate-scroll .custom-card {
+animation: fadeIn 0.5s ease-in-out; /* Animation de fondu lors du premier défilement */
+}
+
+.partenaires-bg {
+  background-color: #004d7d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.partenaires-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partenaire-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.member-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.member-list li {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.member-list li img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.member-list li span {
+  display: block;
+  font-size: 16px;
+}
+.member-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.member-item {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 10px;
+  background-color: #004d7d;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.member-item:hover {
+  background-color: #0088cc;
+}
+
+.member-name {
+  color: white;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.custom-card {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.custom-card-overlay {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.custom-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.custom-card-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.custom-card-overlay a {
+  color: white;
+}
+
+.custom-card-overlay a:hover {
+  text-decoration: none;
+}
+.prototype-section {
+  background-color: #f2f2f2;
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.prototype-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.prototype-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.prototype-item img {
+  width: 100%;
+  height: auto;
+}
+
+.prototype-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.prototype-item:hover .prototype-overlay {
+  opacity: 1;
+}
+
+.prototype-overlay-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.prototype-overlay-description {
+  color: #fff;
+  text-align: center;
+}
+
+.simulation-section {
+  background-color: #e6e6e6;
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.simulation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.simulation-item video {
+  width: 100%;
+  height: auto;
+}
+
+.simulation-overlay-description {
+  text-align: center;
+}
+
+
+  }
